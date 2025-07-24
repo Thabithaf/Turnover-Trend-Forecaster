@@ -1,6 +1,10 @@
 # Turnover-Trend-Forecaster
+
+
 Employee Turnover Prediction Project Documentation
+
 Project Summary
+
 This project developed a predictive model to identify employees at risk of leaving an organization, leveraging a dataset of approximately 1,470 employees. The target variable, Attrition (0 for stay, 1 for leave), revealed a class imbalance with ~83.88% stayers and ~16.12% leavers (1,233 stayed, 237 left). The analysis began with data visualization, uncovering patterns such as longer DistanceFromHome and lower MonthlyIncome correlating with higher turnover. Data preprocessing involved encoding categorical features (e.g., JobRole, Gender) using OneHotEncoder, scaling numerical features with MinMaxScaler, and splitting the data into 75% training (1,102 samples) and 25% testing (368 samples).
 Three classifiers were employed: Logistic Regression, Random Forest, and Artificial Neural Network (ANN). The Logistic Regression model achieved 89.9% accuracy, with a confusion matrix of [[300, 7], [30, 26]] and an F1-score of 0.58 for leavers (recall 0.46). The Random Forest model reached ~90% accuracy, with a confusion matrix of [[310, 0], [44, 17]], precision ~100% for leavers, but a recall of only 0.21 (F1-score ~0.35). The ANN, built with TensorFlow/Keras, achieved ~84% accuracy, with a confusion matrix of [[300, 24], [31, 25]] and an F1-score of 0.48 for leavers (recall 0.45). All models performed strongly for stayers (F1-score ~0.91–0.94) but struggled with leavers due to the imbalance, missing 30–44 leavers. This limitation could cost ~$228,000–$235,600 (30–31 × $7,600 per hire). Key drivers like DistanceFromHome, JobRole, and JobSatisfaction suggest HR interventions such as remote work or role adjustments.
 Objective
